@@ -198,8 +198,8 @@ public class GUI_Principal extends javax.swing.JFrame {
 
     private void registroRutasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registroRutasActionPerformed
         // TODO add your handling code here:
-        GUI_RegistroRutas c = new GUI_RegistroRutas();
-        c.setVisible(true);
+        GUI_RegistroRutas b = new GUI_RegistroRutas();
+        b.setVisible(true);
         dispose();
     }//GEN-LAST:event_registroRutasActionPerformed
 

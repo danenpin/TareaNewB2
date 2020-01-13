@@ -98,6 +98,11 @@ public class RegistroDePasajero extends javax.swing.JFrame {
         btn_p_salir.setText("Salir");
 
         jButton1.setText("Nuevo");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Eliminar");
 
@@ -248,6 +253,10 @@ public class RegistroDePasajero extends javax.swing.JFrame {
         table_pasajero.setModel(metodos.listaPasajero());
         
     }//GEN-LAST:event_btn_p_mostarActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_p_guardar;

@@ -18,13 +18,25 @@ public class MetodoUsuario {
     Vector vUsuario = new Vector();
     Vector v1 = new Vector();
 
-    public void guardarUsuario(Usuario unUsuario) {
+    /* public void creaArchivoUsuario(){
+         File archivo = new File ("Usuario.txt"); 
+         if (!archivo.exists());
+         try{
+             archivo.createNewFile();
+            }catch(Exception e){
+                    
+             }
+    }*/
+   
+     public void guardarUsuario(Usuario unUsuario) {
         vUsuario.addElement(unUsuario);
     }
 
+   
     public void guardarArchivoUsuario(Usuario usuario){
+        
         try {
-            FileWriter fw = new FileWriter (".\\Usuario.txt", true);
+            FileWriter fw = new FileWriter ("Usuario.txt", true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
             pw.print(usuario.getId_usuario());
@@ -34,7 +46,7 @@ public class MetodoUsuario {
             pw.println("|"+usuario.getPassword());
             pw.close();
         } catch (IOException e){
-            JOptionPane.showMessageDialog(null, e);
+               //JOptionPane.showMessageDialog(null, e);
         }
     }
     
@@ -48,7 +60,7 @@ public class MetodoUsuario {
         //Crear vector con nombre apellido pasajero cedula edad
         DefaultTableModel mdlTablaU = new DefaultTableModel(cabeceras,0);
         try {
-            FileReader fr = new FileReader(".\\Usuario.txt");
+            FileReader fr = new FileReader("Usuario.txt");
             BufferedReader br = new BufferedReader(fr);
             String d;
             while ((d=br.readLine())!=null){
@@ -60,14 +72,14 @@ public class MetodoUsuario {
                 mdlTablaU.addRow(x);
             }
         }catch (Exception e){
-        JOptionPane.showMessageDialog(null, e);
+        //JOptionPane.showMessageDialog(null, e);
         }
         return mdlTablaU;
     }
    
     public Vector BuscarUsuario(String unIdUser){
         try {
-            FileReader fr = new FileReader(".\\Usuario.txt");
+            FileReader fr = new FileReader("Usuario.txt");
             BufferedReader br = new BufferedReader(fr);
             String d;
             while ((d=br.readLine())!=null){
@@ -84,7 +96,7 @@ public class MetodoUsuario {
             }br.close();
             fr.close();
         }catch (Exception e){
-        JOptionPane.showMessageDialog(null, e);
+        //JOptionPane.showMessageDialog(null, e);
         }       
         return v1;
     }

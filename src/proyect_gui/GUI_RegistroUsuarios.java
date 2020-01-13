@@ -99,6 +99,12 @@ public class GUI_RegistroUsuarios extends javax.swing.JFrame {
 
         jLabel3.setText("Clave :");
 
+        txt_u_id.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_u_idActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -329,6 +335,10 @@ public class GUI_RegistroUsuarios extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_btn_u_editarActionPerformed
+
+    private void txt_u_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_u_idActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_u_idActionPerformed
 
     /**
      * @param args the command line arguments

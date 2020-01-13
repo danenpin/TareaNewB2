@@ -198,6 +198,9 @@
         <Component class="javax.swing.JTextField" name="txt_u_password">
         </Component>
         <Component class="javax.swing.JTextField" name="txt_u_id">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_u_idActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
